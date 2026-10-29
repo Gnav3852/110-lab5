@@ -8,10 +8,13 @@ const app = express();
 app.use(express.json());
 
 function loadLeaderboard(): LeaderboardEntry[] {
-	if (!existsSync(LEADERBOARD_FILE)) {
+	if (!existsSync(LEADERBOARD_FILE))  {
 		return [];
 	}
 	const text = readFileSync(LEADERBOARD_FILE, "utf8");
+	if (text.trim() === ""){
+		return [];
+	}
 	return JSON.parse(text) as LeaderboardEntry[];
 }
 

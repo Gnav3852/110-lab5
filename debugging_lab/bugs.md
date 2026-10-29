@@ -34,3 +34,9 @@ Bug 6
 - Leaderboard looks to be printing in desending order
 - Comes from the response so its in index.ts
 - Looked at .sort() and it has the wrong sort key
+
+Bug 7
+
+- Issue with parsing an empty json file
+- Results calls updateLeaderboard to get the latest leaderboard which is /api/leaderboard
+- Looking at loadLeaderboard() we don't handle that type of response so we get a parsing error
