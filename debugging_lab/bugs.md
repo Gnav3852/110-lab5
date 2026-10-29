@@ -14,3 +14,11 @@ Bug 3
 
 - Traced where the game set the lemon's "random" position (View)
 - Rounding takes away the randomness 
+
+Bug 4
+
+- The issue is with the result screen playing the sound over and over again
+- On init is called showResultsFromServer
+- Results is init after we each the end of startTimer
+- startTimer calls endGame but stopTimer which clears the timer isnt called
+- This causes an infinite loop
