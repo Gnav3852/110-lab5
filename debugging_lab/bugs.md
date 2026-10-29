@@ -22,3 +22,9 @@ Bug 4
 - Results is init after we each the end of startTimer
 - startTimer calls endGame but stopTimer which clears the timer isnt called
 - This causes an infinite loop
+
+Bug 5
+
+- Looked at the leaderboard payload and saw that time is given properly
+- index.ts saves entries as Time but LeaderboardEntry saves it as Timestamp 
+- Fixed the mismatch in index.ts and leaderboard.json
