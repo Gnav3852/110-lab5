@@ -9,3 +9,8 @@ Bug 2
 - Looked at Network stats response object
 - Returned 0 so looked at index.ts
 - Best was never getting updated in route
+
+Bug 3
+
+- Traced where the game set the lemon's "random" position (View)
+- Rounding takes away the randomness 
